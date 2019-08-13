@@ -43,8 +43,8 @@ class ContactApiDocTest {
                         Preprocessors.prettyPrint(),
                         Preprocessors.removeHeaders("Date", "Content-Length")
                     )
-                .and()
-                .snippets().withAdditionalDefaults(contactTypesSnippet())
+                    .and()
+                    .snippets().withAdditionalDefaults(contactTypesSnippet())
             )
             .build()
     }
