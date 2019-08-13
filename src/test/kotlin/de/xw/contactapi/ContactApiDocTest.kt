@@ -34,7 +34,8 @@ class ContactApiDocTest {
     fun setup(restDocumentation: RestDocumentationContextProvider) {
         this.spec = RequestSpecBuilder()
             .addFilter(
-                RestAssuredRestDocumentation.documentationConfiguration(restDocumentation).operationPreprocessors()
+                RestAssuredRestDocumentation.documentationConfiguration(restDocumentation)
+                    .operationPreprocessors()
                     .withRequestDefaults(
                         Preprocessors.prettyPrint(),
                         Preprocessors.removeHeaders("Host", "Content-Length")
