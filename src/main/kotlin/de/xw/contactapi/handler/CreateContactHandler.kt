@@ -2,29 +2,19 @@ package de.xw.contactapi.handler
 
 import io.ktor.application.ApplicationCall
 import io.ktor.request.receive
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
+import io.ktor.response.respond
 import mu.KLogging
 import java.util.*
 
 class CreateContactHandler {
     companion object : KLogging()
 
-    suspend fun handle(call: ApplicationCall): CreateContactResponse {
-        logger.debug { "handling create contact request" }
-        logger.debug("before getting request")
-
-        GlobalScope.launch {
-            logger.debug("Got request")
-            val request = call.receive(CreateContactRequest::class)
-            delay(2000)
-            logger.debug { request }
-        }
-
-        logger.debug { "after launch" }
-
-        return CreateContactResponse(UUID.randomUUID().toString())
+    suspend fun handle(call: ApplicationCall) {
+        val request = call.receive(CreateContactRequest::class)
+        logger.debug { "handling create contact request: $request" }
+        //do handling
+        val response = CreateContactResponse(UUID.randomUUID().toString())
+        call.respond(response)
     }
 }
 

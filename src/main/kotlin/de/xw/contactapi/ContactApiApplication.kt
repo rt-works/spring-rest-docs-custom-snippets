@@ -8,7 +8,6 @@ import io.ktor.features.CallLogging
 import io.ktor.features.ContentNegotiation
 import io.ktor.features.DefaultHeaders
 import io.ktor.jackson.jackson
-import io.ktor.response.respond
 import io.ktor.routing.post
 import io.ktor.routing.routing
 import io.ktor.server.engine.commandLineEnvironment
@@ -43,8 +42,7 @@ fun Application.main() {
 
     routing {
         post("/contacts/") {
-            val response = createContactHandler.handle(call)
-            call.respond(response)
+            createContactHandler.handle(call)
         }
     }
 }
