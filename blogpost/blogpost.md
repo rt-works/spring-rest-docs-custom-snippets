@@ -168,7 +168,7 @@ Kreuzwerker Author;
 :sectnums:
 
 == Intro
-Once upon a time
+Contact API is for managing of contacts.
 
 === Request
 include::{snippets}/create-contact/curl-request.adoc[]
