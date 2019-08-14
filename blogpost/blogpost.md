@@ -1,7 +1,8 @@
 # Spring REST Docs. Code based documentation
 ## Disclaimer
 This blog post is not going to cover the basics of using the Spring REST Docs. 
-On the internet you can find several tutorials on how to get started with it. I.e. this or this one. 
+On the internet you can find several tutorials on how to get started with it. I.e. [this](https://spring.io/guides/gs/testing-restdocs/)
+ or [this one](https://www.baeldung.com/spring-rest-docs). 
 The goal of this blog post is to provide more insights into an  advanced feature, namely - generating custom documentation snippets, which are based on your code. 
 For instance such snippet can contain a table with all possible enumeration values of a field in request payload for a RESTful API.
 ## Technical stack
@@ -15,7 +16,8 @@ For a sample project I chose following technologies:
 The source code of the project can be found here. 
  
 ## Project overview
-As a sample project I prepared a simple Contact API for creating of contacts. I prepared a Ktor-`Application`:
+As a sample project I prepared [a simple Contact API for creating of contacts](https://github.com/rt-krz/spring-rest-docs-custom-snippets). 
+I prepared a Ktor-`Application`:
 ```kotlin
 fun main(args: Array<String>) {
     // Start Ktor
