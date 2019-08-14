@@ -80,7 +80,6 @@ The handler takes incoming request, deserialize JSON payload, handle it, respond
 To generate documentation I use following unit test:
 ```kotlin
 @ExtendWith(RestDocumentationExtension::class)
-@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 class ContactApiDocTest {
     private val embeddedServer = embeddedServer(factory = Netty, port = 8080, module = Application::main)
         .apply { start() }
@@ -95,13 +94,13 @@ class ContactApiDocTest {
                 RestAssuredRestDocumentation.documentationConfiguration(restDocumentation)
                     .operationPreprocessors()
                     .withRequestDefaults(
-                        Preprocessors.prettyPrint(),
-                        Preprocessors.removeHeaders("Host", "Content-Length")
+                        Preprocessors.prettyPrint()
                     )
                     .withResponseDefaults(
-                        Preprocessors.prettyPrint(),
-                        Preprocessors.removeHeaders("Date", "Content-Length")
+                        Preprocessors.prettyPrint()
                     )
+                    .and()
+                    .snippets().withAdditionalDefaults(contactTypesSnippet())
             )
             .build()
     }
