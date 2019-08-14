@@ -6,12 +6,12 @@ The goal of this blog post is to provide more insights into an  advanced feature
 For instance such snippet can contain a table with all possible enumeration values of a field in request payload for a RESTful API.
 ## Technical stack
 For a sample project I chose following technologies:
-- Kotlin programming language
-- Ktor framework for implementing of the sample RESTful API
-- Koin framework for the dependency injection
-- JUnit 5 for running tests
-- REST Assured in conjunction with Spring REST Docs for generating of documentation
-- Gradle (Kotlin) for building 
+- [Kotlin](https://kotlinlang.org/) programming language
+- [Ktor](https://ktor.io) framework for implementing of the sample RESTful API
+- [Koin](https://insert-koin.io/) framework for the dependency injection
+- [JUnit 5](https://junit.org/junit5/) for running tests
+- [REST Assured](http://rest-assured.io) in conjunction with Spring REST Docs for generating of documentation
+- [Gradle](https://gradle.org/) (Kotlin) for building 
 The source code of the project can be found here. 
  
 ## Project overview
