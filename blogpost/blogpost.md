@@ -13,11 +13,12 @@ For a sample project I chose following technologies:
 - [JUnit 5](https://junit.org/junit5/) for running tests
 - [REST Assured](http://rest-assured.io) in conjunction with Spring REST Docs for generating of documentation
 - [Gradle](https://gradle.org/) (Kotlin) for building 
-The source code of the project can be found here. 
  
 ## Project overview
-As a sample project I prepared [a simple Contact API for creating of contacts](https://github.com/rt-krz/spring-rest-docs-custom-snippets). 
-I prepared a Ktor-`Application`:
+As a sample project I prepared a simple Contact API for creating of contacts.
+The source code of the project can be found [here](https://github.com/rt-krz/spring-rest-docs-custom-snippets).
+  
+First I prepared a Ktor-`Application`:
 ```kotlin
 fun main(args: Array<String>) {
     // Start Ktor
