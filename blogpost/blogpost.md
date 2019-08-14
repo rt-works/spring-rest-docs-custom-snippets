@@ -251,4 +251,5 @@ Now run again `$ ./gradle asciidoctor` and as the result you'll see the followin
 
 ## Conclusion
 As you've seen you can generate great documentation reliying completely on your code base. 
-That means later you don't need to keep docs and code synchronous and just publish the docs every time you build your project.  
+That means later you don't need to keep docs and code synchronous and just publish the docs every time you build your project 
+(i.e. via Jenkins)  
