@@ -270,6 +270,9 @@ Now run again `$ ./gradle asciidoctor` and as a result you'll see the following 
 ![custom-snippet](custom-snippet.png)
 
 ## Conclusion
+The idea of having documentation as code is not new and was [introduced long time ago](https://docs-as-co.de/). 
+One of the pioneers was [LaTeX](https://www.latex-project.org/). 
+The approach is convenient among others for documenting of APIs, where you can minimize manual writing of the documentation. 
 As you've seen you can generate great documentation relying completely on your code base. 
-That means later you don't need to keep docs and code synchronous and just publish the docs every time you build your project 
-(i.e. via Jenkins)  
+That means, later you don't need to keep docs and code synchronous and just publish the docs every time you build your project 
+(i.e. via Jenkins).
