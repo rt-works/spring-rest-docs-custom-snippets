@@ -140,3 +140,28 @@ Aug 12 14:21 httpie-request.adoc
 Aug 12 14:21 request-body.adoc
 Aug 12 14:21 response-body.adoc
 ```
+Later on you need to put a file `index.adoc` into your `src/docs/asciidoc`. This is your starting point for writing 
+docs. Put there following text to get started:
+```asciidoc
+= Contact API
+Kreuzwerker Author;
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+:sectnums:
+
+== Intro
+Once upon a time
+
+=== Request
+include::{snippets}/create-contact/curl-request.adoc[]
+
+include::{snippets}/create-contact/http-request.adoc[]
+
+=== Response
+include::{snippets}/create-contact/response-body.adoc[]
+
+include::{snippets}/create-contact/http-response.adoc[]
+```
+As you see I included some snippets which were generated in the previous steps.
