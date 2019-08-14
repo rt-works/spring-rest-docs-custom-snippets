@@ -186,7 +186,8 @@ Now you can start docs generation with the `gradle`:
 ```bash
 ~/projects/contactapi [master] $ ./gradlew asciidoctor
 ```
-After successful generation open it from `build/asciidoc/html5/index.html`
+After successful generation open it from `build/asciidoc/html5/index.html`. It looks like:
+![asciidocs-sample](asciidoc.png)
 
 Now you got an overview about standard features of `Spring REST Docs` and we're up to continue with
 
