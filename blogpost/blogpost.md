@@ -245,7 +245,7 @@ fun setup(restDocumentation: RestDocumentationContextProvider) {
         .build()
 }
 ```
-Afterwards you need to add a `Mustache` template. Put under `src/test/resources/org/springframework/restdocs/templates/asciidoctor/`
+Afterwards you need to add a [`Mustache`](https://mustache.github.io/) template. Put under `src/test/resources/org/springframework/restdocs/templates/asciidoctor/`
 following `contact-types.snippet` file:
 ```handlebars
 === Contact types
