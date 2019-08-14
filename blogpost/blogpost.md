@@ -183,7 +183,7 @@ enum class ContactType {
 and I would like to document the possible values of the field, which can be passed as request payload. 
 Let's say in form of a table. For this sake you should create a custom snippet for `Spring REST Docs`.
 
-First step is add a classing extending `TemplatedSnippet`:
+First step is to add a classing extending `TemplatedSnippet`:
 ```kotlin
 class ContactTypesSnippet(snippetName: String?, attributes: MutableMap<String, Any>?)
     : TemplatedSnippet(snippetName, attributes) {
@@ -247,11 +247,11 @@ Last step you need to include this snippet into your `index.adoc` by adding:
 include::{snippets}/create-contact/contact-types.adoc[]
 ```
 
-Now run again `$ ./gradle asciidoctor` and as the result you'll see the following section in the docs:
+Now run again `$ ./gradle asciidoctor` and as a result you'll see the following section in the docs:
 
 ![custom-snippet](custom-snippet.png)
 
 ## Conclusion
-As you've seen you can generate great documentation reliying completely on your code base. 
+As you've seen you can generate great documentation relying completely on your code base. 
 That means later you don't need to keep docs and code synchronous and just publish the docs every time you build your project 
 (i.e. via Jenkins)  
