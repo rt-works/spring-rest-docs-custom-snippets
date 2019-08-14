@@ -119,7 +119,6 @@ class ContactApiDocTest {
                         Preprocessors.prettyPrint()
                     )
                     .and()
-                    .snippets().withAdditionalDefaults(contactTypesSnippet())
             )
             .build()
     }
@@ -140,7 +139,7 @@ class ContactApiDocTest {
     }
 }
 ```
-The code represents typical `Spring REST Docs` test, which starts embedded web server and send a request to it.
+The code represents typical `Spring REST Docs` test, which starts embedded web server on fixed port `8080` and send a request to it.
 Thanks to `RestDocumentationExtension` and corresponding configuration in the `setup()` standard snippets are
 generated into the `build/generated-snippets` folder:
 ```bash
@@ -233,12 +232,10 @@ fun setup(restDocumentation: RestDocumentationContextProvider) {
             RestAssuredRestDocumentation.documentationConfiguration(restDocumentation)
                 .operationPreprocessors()
                 .withRequestDefaults(
-                    Preprocessors.prettyPrint(),
-                    Preprocessors.removeHeaders("Host", "Content-Length")
+                    Preprocessors.prettyPrint()
                 )
                 .withResponseDefaults(
-                    Preprocessors.prettyPrint(),
-                    Preprocessors.removeHeaders("Date", "Content-Length")
+                    Preprocessors.prettyPrint()
                 )
                 .and()
                 .snippets().withAdditionalDefaults(contactTypesSnippet())
