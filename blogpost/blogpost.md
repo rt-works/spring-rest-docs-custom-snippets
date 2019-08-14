@@ -1,5 +1,5 @@
 # Spring REST Docs. Code based documentation
-##Disclaimer
+## Disclaimer
 This blog post is not going to cover the basics of using the Spring REST Docs. 
 On the internet you can find several tutorials on how to get started with it. I.e. this or this one. 
 The goal of this blog post is to provide more insights into an  advanced feature, namely - generating custom documentation snippets, which are based on your code. 
