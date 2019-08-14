@@ -11,7 +11,6 @@ import io.restassured.builder.RequestSpecBuilder
 import io.restassured.specification.RequestSpecification
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
-import org.junit.jupiter.api.TestInstance
 import org.junit.jupiter.api.extension.ExtendWith
 import org.springframework.http.HttpHeaders
 import org.springframework.restdocs.RestDocumentationContextProvider
@@ -22,7 +21,6 @@ import org.springframework.restdocs.restassured3.RestAssuredRestDocumentation.do
 import java.util.*
 
 @ExtendWith(RestDocumentationExtension::class)
-@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 class ContactApiDocTest {
     private val embeddedServer = embeddedServer(factory = Netty, port = 8080, module = Application::main)
         .apply { start() }
@@ -37,12 +35,10 @@ class ContactApiDocTest {
                 RestAssuredRestDocumentation.documentationConfiguration(restDocumentation)
                     .operationPreprocessors()
                     .withRequestDefaults(
-                        Preprocessors.prettyPrint(),
-                        Preprocessors.removeHeaders("Host", "Content-Length")
+                        Preprocessors.prettyPrint()
                     )
                     .withResponseDefaults(
-                        Preprocessors.prettyPrint(),
-                        Preprocessors.removeHeaders("Date", "Content-Length")
+                        Preprocessors.prettyPrint()
                     )
                     .and()
                     .snippets().withAdditionalDefaults(contactTypesSnippet())
