@@ -7,7 +7,7 @@ Kreuzwerker Author;
 :sectnums:
 
 == Intro
-The Contact API is devoted to managing of contacts
+Contact API is for managing of contacts
 
 === Request
 include::{snippets}/create-contact/curl-request.adoc[]
