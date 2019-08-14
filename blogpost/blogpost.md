@@ -140,6 +140,7 @@ class ContactApiDocTest {
 }
 ```
 The code represents typical `Spring REST Docs` test, which starts embedded web server on fixed port `8080` and send a request to it.
+In real life scenario you should use a random port number.
 Thanks to `RestDocumentationExtension` and corresponding configuration in the `setup()` standard snippets are
 generated into the `build/generated-snippets` folder:
 ```bash
