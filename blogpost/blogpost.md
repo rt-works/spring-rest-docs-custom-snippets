@@ -15,8 +15,27 @@ For a sample project I chose following technologies:
 - [Gradle](https://gradle.org/) (Kotlin) for building 
  
 ## Project overview
-As a sample project I prepared a simple Contact API for creating of contacts.
 The source code of the project can be found [here](https://github.com/rt-krz/spring-rest-docs-custom-snippets).
+
+As a sample project I prepared a simple Contact API for creating of contacts.
+It has one endpoint for contact creation:
+```
+POST /contacts HTTP/1.1
+{
+  "contactKey" : "dc4b7722-5c47-4ee5-939e-6469b1f9d4e7",
+  "type" : "END_USER"
+}
+```
+which handles the request and returns another JSON payload:
+
+```
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+
+{
+  "contactKey" : "8fa5c51c-cb3e-4cf3-a4b5-6730c99cb011"
+}
+```
   
 First I prepared a Ktor-`Application`:
 ```kotlin
