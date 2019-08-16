@@ -1,5 +1,9 @@
 # Spring REST Docs advanced feature: Code based documentation
-## Disclaimer
+The idea of having documentation as code is not new and was [introduced long time ago](https://docs-as-co.de/). 
+One of the pioneers was [LaTeX](https://www.latex-project.org/). 
+The approach is convenient among others for documenting of APIs, where you can minimize manual writing of the documentation.
+[Spring REST Docs](https://spring.io/projects/spring-restdocs) is great tooling for doing that.
+#### Disclaimer
 This blog post is not going to cover the basics of using the Spring REST Docs. 
 On the internet you can find several tutorials on how to get started with it. I.e. [this](https://spring.io/guides/gs/testing-restdocs/)
  or [this one](https://www.baeldung.com/spring-rest-docs). 
@@ -269,10 +273,7 @@ Now run again `$ ./gradle asciidoctor` and as a result you'll see the following 
 
 ![custom-snippet](custom-snippet.png)
 
-## Conclusion
-The idea of having documentation as code is not new and was [introduced long time ago](https://docs-as-co.de/). 
-One of the pioneers was [LaTeX](https://www.latex-project.org/). 
-The approach is convenient among others for documenting of APIs, where you can minimize manual writing of the documentation. 
+## Conclusion 
 As you've seen you can generate great documentation relying completely on your code base. 
 That means, later you don't need to keep docs and code synchronous and just publish the docs every time you build your project 
 (i.e. via Jenkins).
