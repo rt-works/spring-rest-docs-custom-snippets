@@ -1,4 +1,4 @@
-# Spring REST Docs. Code based documentation
+# Spring REST Docs advanced feature: Code based documentation
 ## Disclaimer
 This blog post is not going to cover the basics of using the Spring REST Docs. 
 On the internet you can find several tutorials on how to get started with it. I.e. [this](https://spring.io/guides/gs/testing-restdocs/)
