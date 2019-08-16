@@ -1,5 +1,5 @@
 # Spring REST Docs advanced feature: Code based documentation
-The idea of having documentation as code is not new and was [introduced long time ago](https://docs-as-co.de/). 
+The idea of having documentation as code is not new and was [introduced a long time ago](https://docs-as-co.de/). 
 One of the pioneers was [LaTeX](https://www.latex-project.org/). 
 The approach is convenient among others for documenting of APIs, where you can minimize manual writing of the documentation.
 [Spring REST Docs](https://spring.io/projects/spring-restdocs) is great tooling for doing that.
@@ -73,7 +73,7 @@ fun Application.main() {
     }
 }
 ```
-You see here a defined `POST`-route `/contacts/` for creating of a new contact. Call to the route is passed to the  
+You see here a defined `POST`-route `/contacts/` for creating a new contact. Call to the route is passed to the  
 `CreateContactHandler` (injected by `Koin`):
 ```kotlin
 class CreateContactHandler {
